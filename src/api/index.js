@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://localhost:44354/api/";
+const BASE_URL = "http://localhost:8056/api/";
 
 export const createAPIEndpoint = endpoint => {
 

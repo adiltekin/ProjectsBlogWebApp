@@ -13,8 +13,8 @@ function Navbar(props) {
             <Toolbar>
               <Grid container spacing={2}>
                 <Grid item xs={10}>
-                  <Button href='http://localhost:3000/' color="inherit">Home</Button>
-                  <Button href='http://localhost:3000/Projects' color="inherit">Projects</Button>
+                  <Button href='/' color="inherit">Home</Button>
+                  <Button href='/Projects' color="inherit">Projects</Button>
                 </Grid>
                 
                 <Grid item xs={2} > 

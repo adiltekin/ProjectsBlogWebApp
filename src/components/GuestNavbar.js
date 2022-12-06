@@ -4,8 +4,8 @@ import React from 'react'
 function GuestNavbar() {
   return (
     <Stack direction="row" justifyContent="flex-end" alignItems="center" spacing={2}>
-        <Button href='http://localhost:3000/login' color="inherit">Login</Button>
-        <Button href='http://localhost:3000/register' color="inherit">Register</Button>            
+        <Button href='/login' color="inherit">Login</Button>
+        <Button href='/register' color="inherit">Register</Button>            
     </Stack> 
     
   )
