@@ -1,10 +1,14 @@
 import { Button, Grid, TextField, Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import { useState } from 'react';
+import DatePickerComponent from './DatePickerComponent';
 
 function ProjectForm(props) {
 
   const{setTrigger, submitBtn, setValues, values} = props;
 
+  const[startDate, setStartDate] = useState();
+  const[endDate, setEndDate] = useState();
   
   const handleInputChange = e => {
     const {name, value} = e.target;
@@ -13,7 +17,13 @@ function ProjectForm(props) {
         [name] : value
     });
   }
-  
+
+  const inputDate = () => {
+    setValues({
+      ...values,
+      "startDate":startDate, 
+      "endDate":endDate})
+  }
 
   return (
     <Container sx={{backgroundColor:"white"}}>
@@ -43,12 +53,36 @@ function ProjectForm(props) {
           <TextField rows={7} multiline defaultValue={values.projectContent} name='projectContent' label="Project Content" onChange={handleInputChange} variant="outlined" sx={{width:"100%"}} />
         </Grid>
 
-        <Grid container justifyContent="center">
-          <Button sx={{width:"30%", mt:3}} color="success" onClick={submitBtn} type='submit'  variant='contained'>Submit</Button>
+        <Grid item xs={4} sx={{p:2}}  >
+          <DatePickerComponent
+          label="Start Date"
+          name="startDate"
+          date={startDate}
+          setDate={setStartDate}
+          handleInputChange={handleInputChange}
+          inputDate={inputDate}
+          />
+        </Grid>
+        
+        <Grid item xs={4} sx={{p:2}}  >
+          <DatePickerComponent 
+          label="End Date"
+          name="endDate"
+          date={endDate}
+          setDate={setEndDate}
+          handleInputChange={handleInputChange}
+          inputDate={inputDate}
+          />
+        </Grid>
+
+
+        <Grid item xs={4}>
+          <Button sx={{width:"100%"}} color="success" onClick={submitBtn} type='submit' variant='contained'>Submit</Button>
         </Grid>
         
 
       </Grid>
+
     </Container>
   )
 }

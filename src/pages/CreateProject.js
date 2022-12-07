@@ -14,13 +14,16 @@ const [values, setValues] = useState({
   projectDetail: "",
   projectContent: "",
   imgName: "",
-  imgUrl: "" 
+  imgUrl: "",
+  startDate: "",
+  endDate: "",
 });
 
 
 const submit = e => {
   e.preventDefault();
   createAPIEndpoint("Project").create("PostProject", values)
+  .then(console.log(values))
   .then(() => setTrigger(false))
   .catch(err => console.log(err));
 }

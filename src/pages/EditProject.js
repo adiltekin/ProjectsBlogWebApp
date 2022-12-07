@@ -13,7 +13,9 @@ const[values, setValues] = useState({
     projectDetail: "",
     projectContent: "",
     imgName: "",
-    imgUrl: "" 
+    imgUrl: "",
+    startDate: "",
+    endDate: "",
 });
 
 const submit = e => {
@@ -32,6 +34,8 @@ useEffect(() => {
             projectContent: res.data.projectContent,
             imgUrl: res.data.imgUrl,
             imgName: res.data.imgName,
+            startDate: res.data.startDate,
+            endDate: res.data.endDate
         });
         setRender(true);
 })       

@@ -15,6 +15,7 @@ function Navbar(props) {
                 <Grid item xs={10}>
                   <Button href='/' color="inherit">Home</Button>
                   <Button href='/Projects' color="inherit">Projects</Button>
+                  <Button href='/Ganttchart' color="inherit">GanttChart</Button>
                 </Grid>
                 
                 <Grid item xs={2} > 

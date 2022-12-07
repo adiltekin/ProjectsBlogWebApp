@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import HomePage from '../pages/HomePage'
 import Login from '../pages/Login'
 import Register from '../pages/Resigter'
+import GanttChart from './GanttChart'
 import ProjectDetail from './ProjectDetail'
 import Projects from './Projects'
 
@@ -65,6 +66,16 @@ function AppRouter() {
 
         <Route path='/projectdetail' element={
             <ProjectDetail 
+            {...{
+                    isLoggedIn,
+                    adminId,
+                    setAdminId
+                    }}
+            />
+        }/> 
+
+        <Route path='/ganttchart' element={
+            <GanttChart 
             {...{
                     isLoggedIn,
                     adminId,

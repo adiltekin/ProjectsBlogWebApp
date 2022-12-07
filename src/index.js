@@ -6,9 +6,7 @@ import AppRouter from './pages/AppRouter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    
-    <AppRouter />
-        
-  </React.StrictMode>
+  
+  <AppRouter />
+ 
 );
