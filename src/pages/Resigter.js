@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {TextField, Box,Typography, Button, Alert} from '@mui/material';
 import { createAPIEndpoint } from '../api/index';
 import {useNavigate} from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import SecurityCode from '../components/SecurityCode';
 
 export default function Register() {
 
@@ -10,6 +10,7 @@ export default function Register() {
   const navigate = useNavigate();
   const [alert, setAlert] = useState({state:false, content:"" , severity:""},);
   const [error, setError] = useState({state:false, content:""})
+  const [security, setSecurity] = useState(false);
 
   
   const Register = e => {
@@ -57,7 +58,7 @@ export default function Register() {
 
   return (  
     <>
-      <Navbar/>
+      {security ? 
       <Box
           sx={{
               marginTop: 18,
@@ -102,7 +103,10 @@ export default function Register() {
               {alert.state ? <Alert severity={alert.severity}>{alert.content}</Alert> : null}
               {error.state ? <Alert severity="error">{error.content}</Alert> : null}
           </Box>
-      </Box>
+      </Box> 
+      : <SecurityCode
+        setSecurity={setSecurity}
+      />}
     </> 
     
   )

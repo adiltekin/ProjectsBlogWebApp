@@ -15,8 +15,8 @@ const [values, setValues] = useState({
   projectContent: "",
   imgName: "",
   imgUrl: "",
-  startDate: "",
-  endDate: "",
+  startDate: new Date(),
+  endDate: new Date(),
 });
 
 

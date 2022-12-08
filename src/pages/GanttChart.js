@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react'
 import Chart from "react-google-charts";
 import { createAPIEndpoint } from '../api';
-import Navbar from '../components/Navbar';
+
 
 
 const columns = [
@@ -19,7 +19,6 @@ const columns = [
 
 function GanttChart(props) {
 
-    const {isLoggedIn} = props;
 
     const [rows, setRows] = useState([])
 
@@ -49,10 +48,6 @@ function GanttChart(props) {
 
   return (
     <>
-        <Navbar
-            isLoggedIn = {isLoggedIn}
-        />
-
         <Box
           sx={{
               marginTop: 10,

@@ -7,8 +7,8 @@ function ProjectForm(props) {
 
   const{setTrigger, submitBtn, setValues, values} = props;
 
-  const[startDate, setStartDate] = useState();
-  const[endDate, setEndDate] = useState();
+  const[startDate, setStartDate] = useState(values.startDate);
+  const[endDate, setEndDate] = useState(values.endDate);
   
   const handleInputChange = e => {
     const {name, value} = e.target;

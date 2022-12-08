@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import { createAPIEndpoint } from '../api';
 import CardLayout from '../components/CardLayout';
 import DeleteCheck from '../components/DeleteCheck';
-import Navbar from '../components/Navbar';
 import Popup from '../components/Popup';
 import CreateProject from './CreateProject';
 import EditProject from './EditProject';
@@ -48,9 +47,6 @@ function Projects(props) {
 
   return (
     <>
-        <Navbar 
-          isLoggedIn = {isLoggedIn}
-        />
         <Grid container justifyContent="center">
           <Typography sx={{fontWeight: "bold", color:"#0E5E6F"}} variant="h3">PROJECTS</Typography>
         </Grid> 

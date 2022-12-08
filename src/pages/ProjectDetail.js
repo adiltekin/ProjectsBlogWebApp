@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import DetailLayout from '../components/DetailLayout';
-import Navbar from '../components/Navbar'
 
 
 function ProjectDetail(props) {
@@ -18,9 +17,6 @@ function ProjectDetail(props) {
 
     return (render ? (
     <>
-        <Navbar
-            isLoggedIn = {isLoggedIn}
-        />
         <DetailLayout 
             isLoggedIn = {isLoggedIn}
             id = {id}

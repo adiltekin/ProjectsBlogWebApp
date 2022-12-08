@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Navbar from '../components/Navbar'
 import HomePage from '../pages/HomePage'
 import Login from '../pages/Login'
 import Register from '../pages/Resigter'
@@ -23,12 +24,15 @@ function AppRouter() {
 
   return (
 
-    
+    <>
+        <Navbar
+            isLoggedIn={isLoggedIn}
+        />
+
 
     <BrowserRouter>
         <Routes>
-
-        
+       
         
         <Route path='/' element={
             <HomePage
@@ -52,6 +56,7 @@ function AppRouter() {
 
         <Route path='/register' element={
             <Register />
+            
         }/> 
 
         <Route path='/projects' element={
@@ -86,6 +91,7 @@ function AppRouter() {
 
         </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

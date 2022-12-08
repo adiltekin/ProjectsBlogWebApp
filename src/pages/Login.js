@@ -3,7 +3,6 @@ import { useState } from 'react';
 import {TextField, Box,Typography, Button, Alert} from '@mui/material';
 import { createAPIEndpoint } from '../api/index';
 import {useNavigate} from 'react-router-dom';
-import Navbar from '../components/Navbar';
 
 export default function Login(props) {
 
@@ -75,7 +74,6 @@ export default function Login(props) {
 
   return (
     <>   
-      <Navbar/>
       <Box
           sx={{
               marginTop: 18,

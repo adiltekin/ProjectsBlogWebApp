@@ -1,16 +1,11 @@
 import {Box, Typography} from '@mui/material'
-import Navbar from '../components/Navbar'
+
 
 function HomePage(props) {
-
-  const {isLoggedIn} = props;
 
 
   return (
     <>
-      <Navbar
-        isLoggedIn = {isLoggedIn}
-      />
       <Box
       sx={{
               marginTop: 20,
